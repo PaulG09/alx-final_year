@@ -54,7 +54,7 @@ app.get("/login/index.html", (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/login/index.html"));
 });
 
-// Login and Signup CSS and JS Files
+// Login, Signup and Verify CSS and JS Files
 app.get("/signup/styles.css", (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/signup/styles.css"));
 });
@@ -71,6 +71,10 @@ app.get("/login/scripts.js", (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/login/scripts.js"));
 });
 
+app.get("/verify/styles.css", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/verify/styles.css"));
+});
+
 // Authentication middleware to protect routes
 const checkAuth = (req, res, next) => {
   const allowedPaths = [
@@ -79,6 +83,7 @@ const checkAuth = (req, res, next) => {
     "/signup/",
     "/styles.css",
     "/api/auth/",
+    "/verify/",
   ];
 
   // If the requested path is in the allowed paths, proceed
