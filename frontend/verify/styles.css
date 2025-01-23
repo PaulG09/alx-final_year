@@ -1,0 +1,151 @@
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Logo Container */
+.logo-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: 120px;
+    max-width: 100%;
+}
+
+/* Main Sign-up Form Container */
+.signup-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Animation container for the lottie animation */
+.animation-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    padding-right: 40px;
+    /* Space for the icon */
+    margin: 8px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: #1a73e8;
+}
+
+/* Password visibility toggle icon */
+.input-field .fa {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+.input-field .fa:hover {
+    color: #1a73e8;
+}
+
+/* Sign-up Button */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1762c2;
+}
+
+/* Sign-in Link */
+.signin-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signin-link p {
+    font-size: 14px;
+}
+
+/* Popup Message */
+.popup-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    background-color: #4caf50;
+    /* Default success color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.popup-message.error {
+    background-color: #f44336;
+    /* Error color */
+}
+
+.popup-message.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 480px) {
+    .signup-container {
+        padding: 30px;
+        width: 80%;
+    }
+
+    .logo {
+        width: 100px;
+    }
+}

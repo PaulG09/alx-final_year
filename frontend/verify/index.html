@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign Up - HealthScope Ghana</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body>
+    <!-- HealthScope Logo (Top Center) -->
+    <div class="logo-container">
+        <a href="#">
+            <img class="logo" />
+        </a>
+    </div>
+
+    <div class="signup-container">
+        <div class="signup-form">
+            <!-- Lottie Animation -->
+            <div class="animation-container">
+                <lottie-player
+                    src="https://assets4.lottiefiles.com/datafiles/XRVoUu3IX4sGWtiC3MPpFnJvZNq7lVWDCa8LSqgS/profile.json"
+                    background="transparent" speed="1" style="max-width: 150px; margin-bottom: 50px;" loop
+                    autoplay></lottie-player>
+            </div>
+
+            <form id="signupForm">
+                <div class="input-field">
+                    <input type="text" id="fullName" placeholder="Full Name" required />
+                </div>
+                <div class="input-field">
+                    <input type="email" id="email" placeholder="Email Address" required />
+                </div>
+                <div class="input-field">
+                    <input type="text" id="username" placeholder="Pick a Username" required />
+                </div>
+                <div class="input-field" style="position: relative;">
+                    <input type="password" id="password" placeholder="Set a Password" required />
+                    <i class="fa fa-eye" id="togglePassword" onclick="togglePasswordVisibility()"></i>
+                </div>
+
+                <div class="signup-actions">
+                    <button type="submit" id="signupButton">SIGN UP</button>
+                </div>
+
+                <div class="signin-link">
+                    <p>
+                        Already have an account? <a href="../login/">Sign In</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Include the external script -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>
