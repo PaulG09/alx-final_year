@@ -39,13 +39,13 @@
                 <div class="input-field">
                     <input type="text" id="username" placeholder="Pick a Username" required />
                 </div>
-                <div class="input-field">
+                <div class="input-field" style="position: relative;">
                     <input type="password" id="password" placeholder="Set a Password" required />
-                    <i class="fas fa-eye" id="togglePassword" onclick="togglePasswordVisibility()"></i>
+                    <i class="fa fa-eye" id="togglePassword" onclick="togglePasswordVisibility()"></i>
                 </div>
 
                 <div class="signup-actions">
-                    <button type="submit">SIGN UP</button>
+                    <button type="submit" id="signupButton">SIGN UP</button>
                 </div>
 
                 <div class="signin-link">
@@ -57,6 +57,7 @@
         </div>
     </div>
 
+    <!-- Include the external script -->
     <script src="scripts.js"></script>
 </body>
 

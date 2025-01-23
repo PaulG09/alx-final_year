@@ -19,19 +19,27 @@ function togglePasswordVisibility() {
 document
   .getElementById("signupForm")
   .addEventListener("submit", async function (e) {
-    e.preventDefault();
+    e.preventDefault(); // Prevent default form submission behavior
 
     // Gather form data
-    const fullName = document.getElementById("fullName").value;
-    const email = document.getElementById("email").value;
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+    const fullName = document.getElementById("fullName").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+    const signupButton = e.target.querySelector("button[type='submit']");
 
-    // Debug: Form submission attempt
-    console.log("Form has been submitted.");
-    console.log("Form data:", { fullName, email, username, password });
+    // Basic form validation (Optional)
+    if (!fullName || !email || !username || !password) {
+      alert("All fields are required. Please fill in all fields.");
+      return;
+    }
+
+    // Disable the signup button to indicate processing
+    signupButton.disabled = true;
+    signupButton.textContent = "Processing...";
 
     try {
+      // Send signup request to the backend API
       const response = await fetch("http://localhost:3000/api/auth/signup", {
         method: "POST",
         headers: {
@@ -40,19 +48,23 @@ document
         body: JSON.stringify({ fullName, email, username, password }),
       });
 
+      // Parse the JSON response
       const data = await response.json();
 
-      // Debug: Form data received by backend
-      console.log("Form has been received by the server.");
-      console.log("Server response:", data);
-
       if (response.ok) {
-        alert("Signup successful!");
+        // Redirect to the verification page on successful signup
+        window.location.href = "../verify/";
       } else {
-        alert(`Error: ${data.error}`);
+        // Handle errors returned from the server
+        signupButton.disabled = false;
+        signupButton.textContent = "Sign Up";
+        alert(`Error: ${data.error || "Signup failed. Please try again."}`);
       }
     } catch (error) {
+      // Handle network or unexpected errors
       console.error("Error:", error);
-      alert("An error occurred. Please try again.");
+      signupButton.disabled = false;
+      signupButton.textContent = "Sign Up";
+      alert("An error occurred. Please check your network and try again.");
     }
   });

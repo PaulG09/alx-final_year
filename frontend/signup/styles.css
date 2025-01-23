@@ -47,12 +47,15 @@ a:hover {
 
 /* Input Fields */
 .input-field {
+    position: relative;
     margin-bottom: 20px;
 }
 
 input {
     width: 100%;
     padding: 12px;
+    padding-right: 40px;
+    /* Space for the icon */
     margin: 8px 0;
     border-radius: 4px;
     border: 1px solid #ddd;
@@ -66,11 +69,19 @@ input:focus {
 }
 
 /* Password visibility toggle icon */
-.fas {
+.input-field .fa {
     position: absolute;
-    right: 20px;
-    top: 42px;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
+    font-size: 16px;
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+.input-field .fa:hover {
+    color: #1a73e8;
 }
 
 /* Sign-up Button */
@@ -97,6 +108,34 @@ button:hover {
 
 .signin-link p {
     font-size: 14px;
+}
+
+/* Popup Message */
+.popup-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    background-color: #4caf50;
+    /* Default success color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.popup-message.error {
+    background-color: #f44336;
+    /* Error color */
+}
+
+.popup-message.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 /* Responsive Styles */
