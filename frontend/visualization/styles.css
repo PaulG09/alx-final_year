@@ -1,0 +1,138 @@
+/* General body styling */
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header styling */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1.5rem 0;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+header .nav {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+header .nav-item {
+    display: inline;
+}
+
+header .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+header .nav-link:hover {
+    background-color: #0056b3;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Make 'active' links stand out */
+header .nav-item .nav-link.active {
+    background-color: #0056b3;
+    color: #fff;
+    pointer-events: none;
+    /* Prevent clicking the active link */
+    border-radius: 5px;
+}
+
+/* Main content styling */
+main {
+    margin: 3rem auto;
+}
+
+section#charts {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Chart container styling */
+.chart-container {
+    width: 100%;
+    height: 80vh;
+    margin: 40px auto;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+    /* Required for positioning the loading spinner */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .chart-container {
+        height: 60vh;
+    }
+}
+
+/* Loading spinner for each chart */
+.loading-spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 8px solid #f3f3f3;
+    /* Light grey background */
+    border-top: 8px solid #007bff;
+    /* Blue color for the spinner */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1.5s linear infinite;
+    display: block;
+}
+
+/* Spinner rotation animation */
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Interpretation box styling */
+.interpretation {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styling */
+footer {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    text-align: center;
+    color: #6c757d;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Link hover effect for better UX */
+.nav-link:hover {
+    background-color: #0056b3;
+    color: #ffffff !important;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
