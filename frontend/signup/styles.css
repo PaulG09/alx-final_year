@@ -1,0 +1,112 @@
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Logo Container */
+.logo-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo {
+    width: 120px;
+    max-width: 100%;
+}
+
+/* Main Sign-up Form Container */
+.signup-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Animation container for the lottie animation */
+.animation-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-field {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: #1a73e8;
+}
+
+/* Password visibility toggle icon */
+.fas {
+    position: absolute;
+    right: 20px;
+    top: 42px;
+    cursor: pointer;
+}
+
+/* Sign-up Button */
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1762c2;
+}
+
+/* Sign-in Link */
+.signin-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.signin-link p {
+    font-size: 14px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 480px) {
+    .signup-container {
+        padding: 30px;
+        width: 80%;
+    }
+
+    .logo {
+        width: 100px;
+    }
+}
