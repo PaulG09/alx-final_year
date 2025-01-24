@@ -1,222 +1,183 @@
+/* General Styles */
 body {
-    background-color: #31317c;
-    background-size: cover;
-    background-position: center;
-    font-family: Arial, sans-serif;
-}
-h1, h2, h3 {
-    color: white;
-}
-header {
-    padding: 20px 0;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-header h1 {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
     margin: 0;
-    font-size: 2.5rem;
-}
-nav ul {
-    list-style: none;
     padding: 0;
-    margin: 10px 0 0;
-    text-align: right;
-}
-nav ul li {
-    display: inline-block;
-    margin-left: 20px;
-}
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-nav ul li a:hover {
-    text-decoration: underline;
-}
-#hero {
-    text-align: center;
-    padding: 40px 20px;
-    color: white;
-    margin-top: 30px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-}
-#hero .btn {
-    background-color: #ff7f50;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    border: none;
-}
-#hero .btn:hover {
-    background-color: #ff5e33;
-    box-shadow: 0 0 10px rgba(255, 94, 51, 0.5);
-}
-.disease-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s;
-}
-.disease-card:hover {
-    transform: translateY(-10px);
-}
-.disease-card img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
-}
-.disease-card h5 {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.disease-card p {
-    font-size: 17px;
-    color: #666;
-}
-footer {
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    background-color: rgba(251, 245, 245, 0.7);
-    margin-top: 40px;
+    color: #333;
 }
 
-/* Dashboard styles */
+/* Sidebar Styles */
 .dashboard-sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 250px;
+    width: 240px;
     height: 100%;
-    background-color: #333;
-    color: white;
-    padding-top: 30px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    z-index: 1000;
 }
+
+.dashboard-sidebar h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #4285f4;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .dashboard-sidebar a {
     display: block;
-    color: white;
-    padding: 15px 20px;
+    color: #555;
+    padding: 10px 20px;
+    margin: 5px 0;
     text-decoration: none;
-    font-size: 1.1rem;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    transition: all 0.3s;
 }
+
 .dashboard-sidebar a:hover {
-    background-color: #444;
+    background-color: #f1f3f4;
+    color: #4285f4;
+    font-weight: 500;
 }
+
+/* Dashboard Content Styles */
 .dashboard-content {
     margin-left: 260px;
     padding: 20px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
+
+/* Header Styles */
 .dashboard-header {
+    background-color: #4285f4;
+    color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
-    border-bottom: 2px solid #ddd;
-}
-.dashboard-header h2 {
-    font-size: 2rem;
-    margin: 0;
-}
-
-/* Welcome Section Styling */
-#welcome-section {
-    background-color: #f8f9fa;
-    padding: 2rem 0;
-}
-
-#welcome-section h2 {
-    font-size: 2rem;
-    color: #333;
-    font-weight: bold;
-}
-
-#welcome-section p {
-    color: #555;
-    line-height: 1.6;
-    font-size: 1rem;
-}
-
-#welcome-section ul {
-    margin: 1rem 0 0;
-    padding: 0;
-}
-
-#welcome-section ul li {
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-#welcome-section ul li i {
-    font-size: 1.2rem;
-    vertical-align: middle;
-}
-
-#welcome-section a.btn {
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-}
-
-#welcome-section img {
-    max-width: 100%;
-    border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Card Styles */
-#welcome-section .card {
+.dashboard-header h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.dashboard-header button {
+    background-color: #ffffff;
+    color: #4285f4;
     border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.dashboard-header button:hover {
+    background-color: #e3e3e3;
+}
+
+/* Card Section Styles */
+#health-statistics-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s;
 }
 
-#welcome-section .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-#welcome-section .card img {
-    border-radius: 8px 8px 0 0;
-    object-fit: cover;
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-#welcome-section .card-title {
+.card-body {
+    padding: 15px;
+}
+
+.card-body h5 {
     font-size: 1.2rem;
-    font-weight: bold;
     color: #333;
+    margin-bottom: 10px;
 }
 
-#welcome-section .card-text {
+.card-body p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.card-body a {
+    text-decoration: none;
+    color: #4285f4;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.card-body a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 15px;
     font-size: 0.9rem;
     color: #666;
-    margin-top: 0.5rem;
+    border-top: 1px solid #e0e0e0;
 }
 
-/* Responsive Adjustments */
+/* Responsive Styles */
 @media (max-width: 768px) {
-    #welcome-section h2 {
-        font-size: 1.8rem;
+    .dashboard-sidebar {
+        width: 200px;
     }
 
-    #welcome-section p,
-    #welcome-section ul li {
-        font-size: 0.9rem;
+    .dashboard-content {
+        margin-left: 210px;
+        padding: 15px;
     }
 
-    #welcome-section .card-title {
-        font-size: 1rem;
+    .dashboard-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .dashboard-sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
     }
 
-    #welcome-section .card-text {
-        font-size: 0.85rem;
+    .dashboard-content {
+        margin-left: 0;
     }
 }
