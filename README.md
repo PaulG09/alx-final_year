@@ -35,26 +35,11 @@ frontend/
 |-- scripts.js
 
 backend/
-|-- server.js
-|-- models/
-|   |-- userModel.js
-|   |-- dataModel.js
-|-- routes/
-|   |-- userRoutes.js
-|   |-- dataRoutes.js
-|-- utils/
-    |-- dataProcessing.js
-
 visualizations/
 |-- diseaseTrend.js
 |-- diseaseDistribution.js
 |-- diseaseComparison.js
 
-config/
-|-- dbConfig.js
-
-migrations/
-|-- migrationFiles.sql
 API Endpoints
 1. Disease Trend
 Endpoint: /api/disease-trend
