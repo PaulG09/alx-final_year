@@ -69,8 +69,8 @@ NPM or Yarn
 Steps:
 Clone the Repository:
 
-git clone https://github.com/your-username/healthscope-ghana.git
-cd healthscope-ghana
+git clonehttps://github.com/PaulG09/alx-final_year.git
+cd alx-final_year
 Install Dependencies:
 
 npm install
