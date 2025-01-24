@@ -1,4 +1,5 @@
 HealthScope Ghana
+
 HealthScope Ghana is a web application designed to provide comprehensive insights into the state of health in Ghana by analyzing, visualizing, and interpreting health-related data. The project seeks to raise awareness, educate users, and facilitate informed decision-making by presenting dynamic, interactive visualizations of key health indicators.
 
 Project Overview
