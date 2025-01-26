@@ -16,18 +16,23 @@ Regional Analysis: Explore health data across different regions in Ghana.
 User Management: User-specific dashboards to track progress and access tailored insights.
 Forecasting Tools: Predictive analysis of health indicators to guide public health interventions.
 API Endpoints: Secure and structured APIs for fetching health data dynamically.
+
 Tech Stack
+
 Frontend:
 HTML, CSS, JavaScript
 Chart.js for interactive visualizations
+
 Backend:
 Node.js with Express.js
 APIs for data handling and dynamic visualizations
 Database:
 MySQL for storing and managing datasets
+
 Additional Tools:
 APIs for external health indicators
 Cloud storage for user data
+
 Project Architecture
 frontend/
 |-- index.html
@@ -87,7 +92,9 @@ npm start
 Access the App:
 
 Visit: http://127.0.0.1:3000
+
 Usage
+
 Register and log in to access personalized dashboards.
 Upload health datasets or view existing visualizations.
 Explore trends, compare diseases, and access educational resources.
@@ -96,6 +103,7 @@ Contributing
 We welcome contributions to HealthScope Ghana! Follow these steps:
 
 Fork the repository.
+
 Create a feature branch: git checkout -b feature-name.
 Commit your changes: git commit -m "Add feature".
 Push to your branch: git push origin feature-name.
@@ -105,6 +113,7 @@ Integration with Machine Learning models for disease prediction.
 Mobile app for easier access to health insights.
 Real-time data visualization updates using WebSockets.
 Multilingual support for wider accessibility.
+
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
